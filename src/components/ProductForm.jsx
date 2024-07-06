@@ -29,9 +29,7 @@ function ProductForm() {
             type="text"
             placeholder="Enter name here"
             value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
+            onChange={(e) => setName(e.target.value)}
           />
         </label>
       </div>
@@ -44,25 +42,26 @@ function ProductForm() {
             type="text"
             placeholder="Enter image URL here"
             value={image}
-            onChange={(e) => {
-              setImage(e.target.value);
-            }}
+            onChange={(e) => setImage(e.target.value)}
           />
         </label>
       </div>
       <div className="input-container">
         <label>
           Price
-          <input
+          <select
             id="price"
             name="price"
-            type="number"
-            placeholder="Enter price here"
             value={price}
-            onChange={(e) => {
-              setPrice(e.target.value);
-            }}
-          />
+            onChange={(e) => setPrice(e.target.value)}
+          >
+            <option value="">Select a price</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+          </select>
         </label>
       </div>
       <div className="input-container">
@@ -73,9 +72,7 @@ function ProductForm() {
             name="description"
             placeholder="Enter description here"
             value={description}
-            onChange={(e) => {
-              setDescription(e.target.value);
-            }}
+            onChange={(e) => setDescription(e.target.value)}
             rows={4}
             cols={30}
           />
